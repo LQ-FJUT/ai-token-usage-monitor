@@ -1,0 +1,35 @@
+[package]
+name = "codex-usage-monitor"
+version = "0.9.2"
+description = "Local-first AI token activity monitor for Windows."
+authors = ["L.Q"]
+license = ""
+repository = ""
+edition = "2021"
+rust-version = "1.77.2"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "app_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.6.3", features = [] }
+
+[dependencies]
+serde_json = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+log = "0.4"
+tauri = { version = "2.11.3", features = ["tray-icon", "protocol-asset"] }
+tauri-plugin-log = "2"
+tauri-plugin-autostart = "2.5.1"
+tauri-plugin-single-instance = "2"
+tauri-plugin-notification = "2.3.3"
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+rusqlite = { version = "0.32", features = ["bundled"] }
+blake3 = "1.5"
+rfd = "0.15"
+
+[dev-dependencies]
+tempfile = "3"

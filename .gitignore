@@ -1,0 +1,23 @@
+node_modules/
+dist/
+coverage/
+.vite/
+.tools/
+*.log
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+
+# Windows installers are retained as local release archives, not Git objects.
+/release/*-Setup.exe
+
+# Local data and credentials must never enter repository history.
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.db
+*.pem
+*.key
+auth.json
+credentials.json
